@@ -139,6 +139,9 @@ header .logotipo img {
 .lista .itemLista .infoGeral .preco {
   font-size: 13px;
 }
+.lista .itemLista .infoGeral .preco .tit {
+  font-weight: 500;
+}
 .lista .itemLista .barraInfo {
   clear: both;
   margin: 10px 0 0 0;
@@ -198,4 +201,7 @@ header .logotipo img {
   display: block;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
+}
+#adasd {
+  color: #000;
 }
