@@ -1,20 +1,21 @@
 body {
   font-family: 'Open Sans';
 }
-header {
+header.cabecalhoPrincipal {
   height: 50px;
   background: #2E3F49;
   z-index: 101;
   margin-bottom: 0;
   border: none;
   position: relative;
+  padding: 0 15px 0 15px;
   /*MENU LATERAL*/
   /*FILTRO LATERAL*/
 }
-header .navbar-collapse {
+header.cabecalhoPrincipal .navbar-collapse {
   color: #fff;
 }
-header .menuPrincipal {
+header.cabecalhoPrincipal .menuPrincipal {
   top: 50px;
   bottom: 0;
   left: 0;
@@ -23,13 +24,15 @@ header .menuPrincipal {
   overflow: hidden;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
+  background-color: #222;
+  border-color: #080808;
 }
-header .menuPrincipal.in {
+header.cabecalhoPrincipal .menuPrincipal.in {
   width: 0;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
 }
-header .menuFiltro {
+header.cabecalhoPrincipal .menuFiltro {
   top: 50px;
   bottom: 0;
   right: 0;
@@ -38,13 +41,23 @@ header .menuFiltro {
   overflow: hidden;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
+  background-color: #222;
+  border-color: #080808;
 }
-header .menuFiltro.in {
+header.cabecalhoPrincipal .menuFiltro ul.filtroGenero {
+  margin: 10px;
+  padding: 0;
+}
+header.cabecalhoPrincipal .menuFiltro ul.filtroGenero li {
+  list-style: none;
+  margin: 0 0 5px 0;
+}
+header.cabecalhoPrincipal .menuFiltro.in {
   width: 0;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
 }
-header .navbar-header .btnIcone {
+header.cabecalhoPrincipal .btnIcone {
   position: relative;
   float: none;
   margin-right: 0;
@@ -54,125 +67,199 @@ header .navbar-header .btnIcone {
   background-color: transparent;
   background-image: none;
   border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
   color: #fff;
 }
-header .navbar-header .btnIcone:hover {
+header.cabecalhoPrincipal .btnIcone:hover {
   background-color: transparent;
 }
-header .menuBar {
+header.cabecalhoPrincipal .menuBar {
   margin: 15px 0 0 0;
 }
-header .menuBar button.btnIcone {
+header.cabecalhoPrincipal .menuBar button.btnIcone {
   padding: 0;
 }
-header .logotipo {
+header.cabecalhoPrincipal .logotipo {
   margin: 10px 0 0 10px;
 }
-header .logotipo img {
+header.cabecalhoPrincipal .logotipo img {
   height: 30px;
 }
-.nav-tabs {
+.listaConteudo .nav-tabs {
   background: #4E6878;
   border-bottom: none;
   margin: 0;
 }
-.nav-tabs li {
+.listaConteudo .nav-tabs li {
   width: 33.333%;
   text-align: center;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
   border-bottom: 2px solid #3A4F5A;
 }
-.nav-tabs li.active {
+.listaConteudo .nav-tabs li.active {
   border-bottom: 2px solid #fff;
 }
-.nav-tabs li > a {
+.listaConteudo .nav-tabs li > a {
   margin-right: 0;
   line-height: 1.42857143;
   border: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
   color: #fff;
 }
-.nav-tabs li.active > a,
-.nav-tabs .nav-tabs > li.active > a:hover,
-.nav-tabs .nav-tabs > li.active > a:focus {
+.listaConteudo .nav-tabs li.active > a,
+.listaConteudo .nav-tabs .nav-tabs > li.active > a:hover,
+.listaConteudo .nav-tabs .nav-tabs > li.active > a:focus {
   color: #2E3F49;
   background-color: #ffffff;
   border: none;
   border-bottom-color: transparent;
   cursor: default;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
 }
-.nav-tabs li.active > a,
-.nav-tabs .nav-tabs > li.active > a:hover,
-.nav-tabs .nav-tabs > li.active > a:focus {
+.listaConteudo .nav-tabs li.active > a,
+.listaConteudo .nav-tabs .nav-tabs > li.active > a:hover,
+.listaConteudo .nav-tabs .nav-tabs > li.active > a:focus {
   border: 1px solid #fff !important;
 }
-.lista .itemLista {
+.listaConteudo .lista .itemLista,
+.listaConteudo .listaFiltro .itemLista {
   padding: 10px;
   border-bottom: 1px solid #DCE4E9;
 }
-.lista .itemLista .imgLogo {
+.listaConteudo .lista .itemLista .imgLogo,
+.listaConteudo .listaFiltro .itemLista .imgLogo {
   width: 70px;
 }
-.lista .itemLista .imgLogo img {
+.listaConteudo .lista .itemLista .imgLogo img,
+.listaConteudo .listaFiltro .itemLista .imgLogo img {
   width: 62px;
   margin: 0 10px 0 0;
 }
-.lista .itemLista .infoGeral {
+.listaConteudo .lista .itemLista .infoGeral,
+.listaConteudo .listaFiltro .itemLista .infoGeral {
   color: #333333;
   font-weight: 300;
   width: 75%;
 }
-.lista .itemLista .infoGeral h2 {
+.listaConteudo .lista .itemLista .infoGeral h2,
+.listaConteudo .listaFiltro .itemLista .infoGeral h2 {
   font-size: 23px;
   font-weight: 300;
   color: #FF2D19;
   margin: 0 0 5px 0;
 }
-.lista .itemLista .infoGeral .data {
+.listaConteudo .lista .itemLista .infoGeral .data,
+.listaConteudo .listaFiltro .itemLista .infoGeral .data {
   font-size: 12px;
 }
-.lista .itemLista .infoGeral .festa {
-  font-size: 20px;
-}
-.lista .itemLista .infoGeral .preco {
-  font-size: 13px;
-}
-.lista .itemLista .infoGeral .preco .tit {
+.listaConteudo .lista .itemLista .infoGeral .festa,
+.listaConteudo .listaFiltro .itemLista .infoGeral .festa {
+  font-size: 16px;
   font-weight: 500;
 }
-.lista .itemLista .barraInfo {
+.listaConteudo .lista .itemLista .infoGeral .info,
+.listaConteudo .listaFiltro .itemLista .infoGeral .info {
+  font-size: 13px;
+}
+.listaConteudo .lista .itemLista .infoGeral .info .tit,
+.listaConteudo .listaFiltro .itemLista .infoGeral .info .tit {
+  font-weight: 500;
+}
+.listaConteudo .lista .itemLista .barraInfo,
+.listaConteudo .listaFiltro .itemLista .barraInfo {
   clear: both;
   margin: 10px 0 0 0;
 }
-.lista .itemLista .barraInfo .tipo {
+.listaConteudo .lista .itemLista .barraInfo .tipo,
+.listaConteudo .listaFiltro .itemLista .barraInfo .tipo {
   font-size: 13px;
   font-weight: 300;
   float: left;
   margin: 0 20px 0 0;
 }
-.lista .itemLista .barraInfo span {
+.listaConteudo .lista .itemLista .barraInfo span,
+.listaConteudo .listaFiltro .itemLista .barraInfo span {
   margin: 0 3px 0 0;
 }
-.lista .itemLista .barraInfo .vip span {
+.listaConteudo .lista .itemLista .barraInfo .vip .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .vip .fa {
   color: #FFBF00;
 }
-.lista .itemLista .barraInfo .consuma span {
+.listaConteudo .lista .itemLista .barraInfo .consuma .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .consuma .fa {
   color: #FF7F00;
 }
-.lista .itemLista .barraInfo .openBar span {
+.listaConteudo .lista .itemLista .barraInfo .openBar .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .openBar .fa {
   color: #FF7F00;
 }
-.lista .itemLista .barraInfo .rank span {
+.listaConteudo .lista .itemLista .barraInfo .rank .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .rank .fa {
   color: #D80000;
 }
-.lista .itemLista .barraInfo .distancia span {
+.listaConteudo .lista .itemLista .barraInfo .distancia .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .distancia .fa {
   color: #2693FF;
+}
+.listaConteudo .lista .semResultado,
+.listaConteudo .listaFiltro .semResultado {
+  display: block;
+  margin: 10px;
+}
+.detalheConteudo .cabecalho .imgCapa img {
+  width: 100%;
+}
+.detalheConteudo .cabecalho .logo {
+  position: relative;
+  top: -65px;
+  text-align: center;
+}
+.detalheConteudo .cabecalho .logo img {
+  border: 3px solid #fff;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  height: 100px;
+}
+.detalheConteudo .infoGeral {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  top: -65px;
+}
+.detalheConteudo .infoGeral h2.nome {
+  font-size: 23px;
+  font-weight: 300;
+  color: #FF2D19;
+  margin: 0 0 5px 0;
+}
+.detalheConteudo .infoGeral .data {
+  font-size: 12px;
+}
+.detalheConteudo .infoGeral .festa {
+  font-size: 16px;
+  font-weight: 500;
+}
+.detalheConteudo .infoGeral .descricao {
+  margin: 15px 0 15px 0;
+}
+.detalheConteudo .infoGeral .info {
+  font-size: 16px;
+}
+.detalheConteudo .infoGeral .info .tit {
+  font-weight: 600;
 }
 .blackout {
   width: 100%;
-  height: 800px;
+  height: 100%;
   background: #000;
   opacity: 0.3;
   position: fixed;
@@ -188,7 +275,7 @@ header .logotipo img {
 }
 .blackout2 {
   width: 100%;
-  height: 800px;
+  height: 100%;
   background: #000;
   opacity: 0.3;
   position: fixed;
@@ -201,7 +288,4 @@ header .logotipo img {
   display: block;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
-}
-#adasd {
-  color: #000;
 }
