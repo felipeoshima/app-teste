@@ -1,10 +1,20 @@
 body {
   font-family: 'Open Sans';
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
 header.cabecalhoPrincipal {
   height: 50px;
   background: #2E3F49;
-  z-index: 101;
+  z-index: 100;
   margin-bottom: 0;
   border: none;
   position: relative;
@@ -12,8 +22,31 @@ header.cabecalhoPrincipal {
   /*MENU LATERAL*/
   /*FILTRO LATERAL*/
 }
-header.cabecalhoPrincipal .navbar-collapse {
+header.cabecalhoPrincipal .busca {
+  position: relative;
+  left: 25px;
+  width: 95%;
+  top: -42px;
+  height: 50px;
+  display: none;
+}
+header.cabecalhoPrincipal .busca input[type='text'] {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  background: #2E3F49;
   color: #fff;
+  font-size: 15px;
+  padding: 0 0 0 15px;
+}
+header.cabecalhoPrincipal .busca .fechaBusca {
+  color: #fff;
+  position: relative;
+  top: -30px;
+  right: 0;
+  font-size: 18px;
+  opacity: 0.6;
+  left: 95%;
 }
 header.cabecalhoPrincipal .menuPrincipal {
   top: 50px;
@@ -26,6 +59,7 @@ header.cabecalhoPrincipal .menuPrincipal {
   -webkit-transition: all .25s linear;
   background-color: #222;
   border-color: #080808;
+  z-index: 102;
 }
 header.cabecalhoPrincipal .menuPrincipal.in {
   width: 0;
@@ -33,27 +67,48 @@ header.cabecalhoPrincipal .menuPrincipal.in {
   -webkit-transition: all .25s linear;
 }
 header.cabecalhoPrincipal .menuFiltro {
-  top: 50px;
+  top: 0;
   bottom: 0;
   right: 0;
-  width: 200px;
+  width: 300px;
   position: fixed;
   overflow: hidden;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
-  background-color: #222;
-  border-color: #080808;
+  background-color: #fff;
+  color: #333;
+  font-size: 17px;
+  z-index: 102;
 }
-header.cabecalhoPrincipal .menuFiltro ul.filtroGenero {
+header.cabecalhoPrincipal .menuFiltro h4 {
+  padding: 15px 10px 15px 10px;
+  background: #333;
+  color: #fff;
+}
+header.cabecalhoPrincipal .menuFiltro h4 span {
+  float: right;
+}
+header.cabecalhoPrincipal .menuFiltro h5 {
+  border-bottom: 1px solid #ddd;
+  margin: 15px 0 0 10px;
+  font-weight: normal;
+  font-size: 17px;
+}
+header.cabecalhoPrincipal .menuFiltro ul.filtro {
   margin: 10px;
   padding: 0;
 }
-header.cabecalhoPrincipal .menuFiltro ul.filtroGenero li {
+header.cabecalhoPrincipal .menuFiltro ul.filtro li {
   list-style: none;
   margin: 0 0 5px 0;
 }
+header.cabecalhoPrincipal .menuFiltro ul.filtro li input[type=checkbox],
+header.cabecalhoPrincipal .menuFiltro ul.filtro li input[type=radio] {
+  width: 17px;
+  height: 17px;
+}
 header.cabecalhoPrincipal .menuFiltro.in {
-  width: 0;
+  right: -300px;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
 }
@@ -71,12 +126,14 @@ header.cabecalhoPrincipal .btnIcone {
   -moz-border-radius: 0;
   border-radius: 0;
   color: #fff;
+  font-size: 20px;
+  outline: none;
 }
 header.cabecalhoPrincipal .btnIcone:hover {
   background-color: transparent;
 }
 header.cabecalhoPrincipal .menuBar {
-  margin: 15px 0 0 0;
+  margin: 11px 0 0 0;
 }
 header.cabecalhoPrincipal .menuBar button.btnIcone {
   padding: 0;
@@ -129,88 +186,106 @@ header.cabecalhoPrincipal .logotipo img {
 .listaConteudo .nav-tabs .nav-tabs > li.active > a:focus {
   border: 1px solid #fff !important;
 }
-.listaConteudo .lista .itemLista,
-.listaConteudo .listaFiltro .itemLista {
+.listaConteudo .listaGeral .itemLista,
+.listaConteudo .listaFiltro .itemLista,
+.listaConteudo .listaBusca .itemLista {
   padding: 10px;
   border-bottom: 1px solid #DCE4E9;
 }
-.listaConteudo .lista .itemLista .imgLogo,
-.listaConteudo .listaFiltro .itemLista .imgLogo {
+.listaConteudo .listaGeral .itemLista .imgLogo,
+.listaConteudo .listaFiltro .itemLista .imgLogo,
+.listaConteudo .listaBusca .itemLista .imgLogo {
   width: 70px;
 }
-.listaConteudo .lista .itemLista .imgLogo img,
-.listaConteudo .listaFiltro .itemLista .imgLogo img {
+.listaConteudo .listaGeral .itemLista .imgLogo img,
+.listaConteudo .listaFiltro .itemLista .imgLogo img,
+.listaConteudo .listaBusca .itemLista .imgLogo img {
   width: 62px;
   margin: 0 10px 0 0;
 }
-.listaConteudo .lista .itemLista .infoGeral,
-.listaConteudo .listaFiltro .itemLista .infoGeral {
+.listaConteudo .listaGeral .itemLista .infoGeral,
+.listaConteudo .listaFiltro .itemLista .infoGeral,
+.listaConteudo .listaBusca .itemLista .infoGeral {
   color: #333333;
   font-weight: 300;
   width: 75%;
 }
-.listaConteudo .lista .itemLista .infoGeral h2,
-.listaConteudo .listaFiltro .itemLista .infoGeral h2 {
+.listaConteudo .listaGeral .itemLista .infoGeral h2,
+.listaConteudo .listaFiltro .itemLista .infoGeral h2,
+.listaConteudo .listaBusca .itemLista .infoGeral h2 {
   font-size: 23px;
   font-weight: 300;
   color: #FF2D19;
   margin: 0 0 5px 0;
 }
-.listaConteudo .lista .itemLista .infoGeral .data,
-.listaConteudo .listaFiltro .itemLista .infoGeral .data {
+.listaConteudo .listaGeral .itemLista .infoGeral .data,
+.listaConteudo .listaFiltro .itemLista .infoGeral .data,
+.listaConteudo .listaBusca .itemLista .infoGeral .data {
   font-size: 12px;
 }
-.listaConteudo .lista .itemLista .infoGeral .festa,
-.listaConteudo .listaFiltro .itemLista .infoGeral .festa {
+.listaConteudo .listaGeral .itemLista .infoGeral .festa,
+.listaConteudo .listaFiltro .itemLista .infoGeral .festa,
+.listaConteudo .listaBusca .itemLista .infoGeral .festa {
   font-size: 16px;
   font-weight: 500;
 }
-.listaConteudo .lista .itemLista .infoGeral .info,
-.listaConteudo .listaFiltro .itemLista .infoGeral .info {
+.listaConteudo .listaGeral .itemLista .infoGeral .info,
+.listaConteudo .listaFiltro .itemLista .infoGeral .info,
+.listaConteudo .listaBusca .itemLista .infoGeral .info {
   font-size: 13px;
 }
-.listaConteudo .lista .itemLista .infoGeral .info .tit,
-.listaConteudo .listaFiltro .itemLista .infoGeral .info .tit {
+.listaConteudo .listaGeral .itemLista .infoGeral .info .tit,
+.listaConteudo .listaFiltro .itemLista .infoGeral .info .tit,
+.listaConteudo .listaBusca .itemLista .infoGeral .info .tit {
   font-weight: 500;
 }
-.listaConteudo .lista .itemLista .barraInfo,
-.listaConteudo .listaFiltro .itemLista .barraInfo {
+.listaConteudo .listaGeral .itemLista .barraInfo,
+.listaConteudo .listaFiltro .itemLista .barraInfo,
+.listaConteudo .listaBusca .itemLista .barraInfo {
   clear: both;
   margin: 10px 0 0 0;
 }
-.listaConteudo .lista .itemLista .barraInfo .tipo,
-.listaConteudo .listaFiltro .itemLista .barraInfo .tipo {
+.listaConteudo .listaGeral .itemLista .barraInfo .tipo,
+.listaConteudo .listaFiltro .itemLista .barraInfo .tipo,
+.listaConteudo .listaBusca .itemLista .barraInfo .tipo {
   font-size: 13px;
   font-weight: 300;
   float: left;
   margin: 0 20px 0 0;
 }
-.listaConteudo .lista .itemLista .barraInfo span,
-.listaConteudo .listaFiltro .itemLista .barraInfo span {
+.listaConteudo .listaGeral .itemLista .barraInfo span,
+.listaConteudo .listaFiltro .itemLista .barraInfo span,
+.listaConteudo .listaBusca .itemLista .barraInfo span {
   margin: 0 3px 0 0;
 }
-.listaConteudo .lista .itemLista .barraInfo .vip .fa,
-.listaConteudo .listaFiltro .itemLista .barraInfo .vip .fa {
+.listaConteudo .listaGeral .itemLista .barraInfo .vip .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .vip .fa,
+.listaConteudo .listaBusca .itemLista .barraInfo .vip .fa {
   color: #FFBF00;
 }
-.listaConteudo .lista .itemLista .barraInfo .consuma .fa,
-.listaConteudo .listaFiltro .itemLista .barraInfo .consuma .fa {
+.listaConteudo .listaGeral .itemLista .barraInfo .consuma .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .consuma .fa,
+.listaConteudo .listaBusca .itemLista .barraInfo .consuma .fa {
   color: #FF7F00;
 }
-.listaConteudo .lista .itemLista .barraInfo .openBar .fa,
-.listaConteudo .listaFiltro .itemLista .barraInfo .openBar .fa {
+.listaConteudo .listaGeral .itemLista .barraInfo .openBar .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .openBar .fa,
+.listaConteudo .listaBusca .itemLista .barraInfo .openBar .fa {
   color: #FF7F00;
 }
-.listaConteudo .lista .itemLista .barraInfo .rank .fa,
-.listaConteudo .listaFiltro .itemLista .barraInfo .rank .fa {
+.listaConteudo .listaGeral .itemLista .barraInfo .rank .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .rank .fa,
+.listaConteudo .listaBusca .itemLista .barraInfo .rank .fa {
   color: #D80000;
 }
-.listaConteudo .lista .itemLista .barraInfo .distancia .fa,
-.listaConteudo .listaFiltro .itemLista .barraInfo .distancia .fa {
+.listaConteudo .listaGeral .itemLista .barraInfo .distancia .fa,
+.listaConteudo .listaFiltro .itemLista .barraInfo .distancia .fa,
+.listaConteudo .listaBusca .itemLista .barraInfo .distancia .fa {
   color: #2693FF;
 }
-.listaConteudo .lista .semResultado,
-.listaConteudo .listaFiltro .semResultado {
+.listaConteudo .listaGeral .semResultado,
+.listaConteudo .listaFiltro .semResultado,
+.listaConteudo .listaBusca .semResultado {
   display: block;
   margin: 10px;
 }
@@ -261,12 +336,12 @@ header.cabecalhoPrincipal .logotipo img {
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: 0.3;
+  opacity: 0.5;
   position: fixed;
   display: none;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
 }
 .blackout.in {
   display: block;
@@ -277,12 +352,12 @@ header.cabecalhoPrincipal .logotipo img {
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: 0.3;
+  opacity: 0.5;
   position: fixed;
   display: none;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 101;
 }
 .blackout2.in {
   display: block;
