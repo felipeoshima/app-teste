@@ -64,8 +64,8 @@
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.8.0">
-    <param name="152479708206968" value="152479708206968" />
-    <param name="appTeste" value="appTeste" />
+    <param name="APP_ID" value="152479708206968" />
+    <param name="APP_NAME" value="appTeste" />
   </gap:plugin>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
