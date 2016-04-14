@@ -63,7 +63,7 @@
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>
-  <gap:plugin name="com.phonegap.plugins.facebookconnect" version="1.0.0">
+  <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.8.0">
     <param name="152479708206968" value="152479708206968" />
     <param name="appTeste" value="appTeste" />
   </gap:plugin>
