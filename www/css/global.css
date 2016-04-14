@@ -49,17 +49,33 @@ header.cabecalhoPrincipal .busca .fechaBusca {
   left: 95%;
 }
 header.cabecalhoPrincipal .menuPrincipal {
-  top: 50px;
+  top: 0;
   bottom: 0;
   left: 0;
-  width: 200px;
+  width: 300px;
   position: fixed;
   overflow: hidden;
   transition: all .25s linear;
   -webkit-transition: all .25s linear;
-  background-color: #222;
-  border-color: #080808;
+  background-color: #fff;
+  color: #333;
+  font-size: 17px;
   z-index: 102;
+}
+header.cabecalhoPrincipal .menuPrincipal .infoUsuario {
+  background: #131629;
+  padding: 10px;
+  text-align: center;
+}
+header.cabecalhoPrincipal .menuPrincipal .infoUsuario #fotoUsuario {
+  margin: 0 0 10px 0;
+}
+header.cabecalhoPrincipal .menuPrincipal .infoUsuario #fotoUsuario img {
+  border-radius: 50%;
+  width: 130px;
+}
+header.cabecalhoPrincipal .menuPrincipal .infoUsuario #nomeUsuario {
+  color: #ffffff;
 }
 header.cabecalhoPrincipal .menuPrincipal.in {
   width: 0;

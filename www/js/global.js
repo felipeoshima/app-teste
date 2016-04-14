@@ -211,6 +211,7 @@ $(document).ready(function() {
 
 	$(".btnBusca").on('click', function() {
 		$(".busca").css("display","block")
+		$(".busca input").focus()
 	})
 
 	$(".busca .fechaBusca").on('click', function() {

@@ -41,17 +41,36 @@ header.cabecalhoPrincipal {
 	}
 
 	.menuPrincipal {
-		top:50px;
+		top:0;
 		bottom:0;
 		left:0;
-		width:200px;
+		width:300px;
 		position:fixed;
 		overflow:hidden;
 		transition: all .25s linear;
-		-webkit-transition: all .25s linear;    
-		background-color: #222;
-		border-color: #080808;
+		-webkit-transition: all .25s linear;
+		background-color: #fff;
+		color:#333;
+		font-size:17px;
 		z-index:102;
+
+		.infoUsuario {
+			background: #131629;
+			padding: 10px;
+			text-align:center;
+
+			#fotoUsuario {
+				margin:0 0 10px 0;
+
+				img {
+					border-radius:50%;
+					width:130px
+				}
+			}
+			#nomeUsuario {
+				color:#fff
+			}
+		}
 	}
 	.menuPrincipal.in {
 		width:0;
